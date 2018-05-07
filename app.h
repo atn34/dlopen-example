@@ -7,7 +7,7 @@ struct App {
 };
 
 extern "C" {
-std::unique_ptr<App> AppFactory();
+std::unique_ptr<App> __attribute__((visibility("default"))) AppFactory();
 }
 
 struct DlApp {
